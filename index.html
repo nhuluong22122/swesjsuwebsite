@@ -155,6 +155,9 @@
             <div class="row">
             <img src="img/Membership.jpg" class="img-responsive center-block" alt="Cinque Terre" width="500" height="500">
             </div>
+            <div class="row">
+            <p id="demo"></p>
+            </div>
         </div>
     </section>
     <!-- Portfolio Grid Section -->
@@ -441,30 +444,19 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.js"></script>
-    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="index.js"></script>
-
-        <script type="text/javascript">
-            $(window).scroll(function() {
-                var windowsHeight = $(document).height() - $(window).height();
-                var currentScroll = $(window).scrollTop();
-                 if($(this).scrollTop()>=$('#membership').position().top){
-                    alert("hi");
-                }
-                if( ((currentScroll *100) / windowsHeight) > 7){
-                     //do whatever
-                    $(".navbar-custom").css("background-color","#5C5379");
-                    // $(".navbar-collapse ").css("background-color","rgba(255 , 255, 255, 0.2)");
-
-                } 
-                else {
-                     $(".navbar-custom").css("background-color","rgba(255 , 255, 255, 0.2)");
-                     $(".navbar-collapse ").css("background-color","");
-                        
-                }
-            });
+    <script src="noframework.waypoints.js">
     </script>
-    
+    <script type="text/javascript">
+        var waypoint = new Waypoint({
+            element: document.getElementById('membership'),
+            handler: function(direction){
+                $(".navbar-custom").css("background-color","rgba(255 , 255, 255, 0.2)");
+            }
+        })
+    </script>
+
+
+
         
 </body>
 
