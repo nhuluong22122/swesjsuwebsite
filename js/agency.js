@@ -16,7 +16,7 @@
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '#mainNav', 
-        offset: 100 ,
+        offset: 50 ,
 
     });
 
@@ -29,7 +29,7 @@
     //Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
-            top: 100    
+            top: 50    
         }
     })
      $(window).scroll(function() {
