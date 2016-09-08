@@ -110,7 +110,7 @@ fieldset[disabled] .btn-primary.active {
   font-size: 18px;
   padding: 20px 40px;
   margin-top: 40px;
-  
+
 }
 .btn-xl:hover,
 .btn-xl:focus,
@@ -369,6 +369,7 @@ section h3.section-subheading {
 #portfolio * {
   z-index: 0;
   text-align: center;
+  background-color:;
 }
 @media (min-width: 767px) {
   #portfolio .portfolio-item {

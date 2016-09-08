@@ -22,9 +22,10 @@ in your form:</strong>'.$error.'</div>';
         else
         {
             $headers = 'From: <productiveworld@example.com>';
-            $subject = $_POST['subject'];
+            $subject = $_POST["subject"];
+            //echo $subject;
             if (mail("nhuluong2212@gmail.com", $subject, "Name: ".$_POST['name']."Email: ".$_POST['email']."Comment: ".$_POST['message'],$headers)) {
-                $result='<div class="alert alert-success"><strong>Thank you!</strong> Ill be in touch.</div>';
+                $result='<div class="alert alert-success"><strong>Thank you!</strong> We will get back to you within 24 hours.</div>';
 
             }else
             {
@@ -137,7 +138,7 @@ an error sending your message. Please try again later.</div>';
         <div class="container">
             <div class="intro-text">
                 <!-- <div class="intro-heading"></div> -->
-                <a href="#services" id="button1" class="page-scroll btn btn-xl">Learn More</a>
+                <a href="#aboutus" id="button1" class="page-scroll btn btn-xl">Learn More</a>
             </div>
         </div>
     </header>
@@ -325,7 +326,7 @@ an error sending your message. Please try again later.</div>';
             <div class="row">
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/president.jpg" class="img-responsive img-circle" alt="">
                         <h4>Aishwarya Borkar</h4>
                         <p class="text-muted">President</p>
                         <ul class="list-inline social-buttons">
@@ -340,7 +341,7 @@ an error sending your message. Please try again later.</div>';
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/vp.jpg" class="img-responsive img-circle" alt="">
                         <h4>Kaanchana Allanki</h4>
                         <p class="text-muted">Vice President</p>
                         <ul class="list-inline social-buttons">
@@ -355,7 +356,7 @@ an error sending your message. Please try again later.</div>';
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/secretary.jpg" class="img-responsive img-circle" alt="">
                         <h4>Nhu Luong</h4>
                         <p class="text-muted">Secretary</p>
                         <ul class="list-inline social-buttons">
@@ -370,7 +371,7 @@ an error sending your message. Please try again later.</div>';
                 </div>
                 <div class="col-sm-3">
                     <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                        <img src="img/treasurer.jpg" class="img-responsive img-circle" alt="">
                         <h4>Shweta More</h4>
                         <p class="text-muted">Treasurer</p>
                         <ul class="list-inline social-buttons">
@@ -404,44 +405,44 @@ an error sending your message. Please try again later.</div>';
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form name="sentMessage" id="contactForm" novalidate>
+                    <form method="post">
+                        <?php echo $result; ?>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Your Name *" id="name"
+                                    <input type="text" class="form-control" placeholder="Your Name *"
                                     name="name"
-                                    >
-                                    <p class="help-block text-danger"></p>
+                                    value="<?php echo $_POST['name'];?>"/>
+
 
 
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email"
-                                    name="email"
+                                    <input type="email" class="form-control" placeholder="Your Email *"
+                                    name="email"  value="<?php echo $_POST['email'];?>"
                                     >
-                                    <p class="help-block text-danger"></p>
+
 
 
                              </div>
                                 <div class="form-group">
                                     <input type="tel" class="form-control" placeholder="Subject *"
-                                    name="subject" id="subject"
-                                    >
-                                   <p class="help-block text-danger"></p>
+                                    name="subject"
+                                     value="<?php echo $_POST['subject'];?>">
+
 
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <textarea class="form-control" placeholder="Your Message *" id="message" name="message"></textarea>
-                                     <p class="help-block text-danger"></p>
+                                    <textarea class="form-control" placeholder="Your Message *" name="message"><?php echo $_POST['message']; ?></textarea>
 
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                             <div class="col-lg-12 text-center">
                                 <div id="success"></div>
-                                <button type="submit" id="submit" name="submit" type="submit" formtarget="_self" class="btn btn-xl">Send Message</button>
+                                <button type="submit" id="submit" name="submit" type="submit" formtarget="_self" class="btn btn-xl" value="Send Message">Send Message</button>
                             </div>
                         </div>
                          <div class="form-group" >
@@ -502,8 +503,8 @@ an error sending your message. Please try again later.</div>';
 
 
     <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+    <!-- <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script> -->
 
     <!-- Theme JavaScript -->
     <script src="js/agency.js"></script>
