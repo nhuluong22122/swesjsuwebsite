@@ -15,9 +15,8 @@
 
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
-        target: '#mainNav',
-        offset: 72 ,
-
+        target: '.navbar-fixed-top',
+        offset: 51,
     });
 
     // Closes the Responsive Menu on Menu Item Click
@@ -29,7 +28,7 @@
     //Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
-            top: 70
+          top: 100
         }
     })
      $(window).scroll(function() {
@@ -59,6 +58,7 @@
                 else {
                      $(".navbar-custom").css("background-color","rgba(255 , 255, 255, 0.2)");
                      $(".navbar-collapse ").css("background-color","");
+                     $(".").css("")
 
             }
      });

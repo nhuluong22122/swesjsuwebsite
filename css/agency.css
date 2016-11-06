@@ -171,7 +171,7 @@ fieldset[disabled] .btn-xl.active {
   border-color: none;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  color: #fed136;
+  color: white;
   font-size: 12px;
 
 }
@@ -186,9 +186,11 @@ fieldset[disabled] .btn-xl.active {
   letter-spacing: 1px;
   color: white;
 }
-.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:hover{
+  color:  #fed136;
+}
 .navbar-custom .nav li a:focus {
-  color: #fed136;
+  color:  white;
   outline: none;
 }
 .navbar-custom .navbar-nav > .active > a {
@@ -318,6 +320,7 @@ section h3.section-subheading {
   position: relative;
   max-width: 400px;
   margin: 0 auto;
+
 }
 #portfolio .portfolio-item .portfolio-link .portfolio-hover {
   background: rgba(254, 209, 54, 0.9);
@@ -708,6 +711,7 @@ ul.social-buttons li a:active {
 }
 .portfolio-modal .modal-content img {
   margin-bottom: 30px;
+  height: 200px;
 }
 .portfolio-modal .close-modal {
   position: absolute;
@@ -768,4 +772,14 @@ body {
 #cal{
   display:inline-block;
    margin:0 auto;
+}
+#event{
+  text-align: center;
+}
+.fixedcontainer img{
+  height: 300px;
+  width: 400px;
+  align-content: center;
+
+
 }
