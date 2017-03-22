@@ -578,7 +578,7 @@ section#membership .section-heading
   color: #FFFFFF;
 }
 section#contact {
-  background-color: #FFFFFF;
+  background-color: #eeeeee;
   background-image: url('../img/map-image.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -633,6 +633,7 @@ section#contact .text-danger {
   color: #e74c3c;
 }
 footer {
+  background-color: white;
   padding: 25px 0;
   text-align: center;
 }
@@ -782,4 +783,15 @@ body {
   align-content: center;
 
 
+}
+#sponsors {
+  background-color: white;
+}
+span.title {
+
+  font-size: 18px;
+  color: #fed136;
+}
+.name{
+  color: #5C5379;
 }
